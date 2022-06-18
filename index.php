@@ -160,11 +160,11 @@
                 ?>
                     <label>
                         <input type="radio" data-type="<?php echo $term->slug; ?>" name="isotope-filter" />
-                    <span>
-                        <?php
-                            echo $term->name;
-                        ?>
-                    </span>
+                        <span>
+                            <?php
+                                echo $term->name;
+                            ?>
+                        </span>
                     </label>
                 <?php
                     endforeach;
