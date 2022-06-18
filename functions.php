@@ -13,6 +13,7 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'widgets' );
         add_theme_support( 'menus' );
+        add_theme_support( 'automatic-feed-links' );
 
         register_nav_menus(array(
             'primary-menu'      => __( 'Primary Menu', 'bluegoon' ),
