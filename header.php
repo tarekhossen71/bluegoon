@@ -20,7 +20,7 @@
           <i class="fa fa-times" id="menu-close"></i>
           <div class="container">
             <div class="image">
-                <a href="#">
+                <a href="<?php echo home_url(); ?>">
                     <?php
                         if( has_custom_logo() ){
                             the_custom_logo();
@@ -60,7 +60,11 @@
                 ?>
                     <li>
                         <a href="#">
-                            <i class="<?php echo $social['social_icon']; ?>"></i>
+                            <i class="<?php
+                            if( isset($social['social_icon']) ){
+                                echo $social['social_icon']; 
+                            }
+                            ?>"></i>
                         </a>
                     </li>
                 <?php
@@ -74,7 +78,9 @@
             <div class="copyright-text">
                 <p>
                     <?php
-                        echo $options['copyright_text'];
+                        if( isset($options['copyright_text']) ){
+                            echo $options['copyright_text'];
+                        }
                     ?>
                 <br>
               Design: Tarek

@@ -291,7 +291,9 @@ html {
 	font-size: 1.3em;
 }
 
-
+.row .col-md-12 .fa {
+	font-size: 80px;
+}
 /* Section */
 
 .section {

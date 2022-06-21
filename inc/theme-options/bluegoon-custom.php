@@ -24,17 +24,19 @@ if( class_exists( 'CSF' ) ) {
           'title'   => 'Header Socail',
           'fields'  => array(
             array(
-                'id'    => 'social_icon',
-                'title' => 'Icon Class',
-                'type'  => 'text',
-                'desc'  => 'Get Icon Class From: https://fontawesome.com/',
+                'id'        => 'social_icon',
+                'title'     => 'Icon Class',
+                'type'      => 'text',
+                'desc'      => 'Get Icon Class From: https://fontawesome.com/',
+                'default'   => 'fa fa-facebook',
             ),
           ),
         ),
         array(
             'id'        => 'copyright_text',
             'title'     => 'Copyright Text',
-            'type'      => 'text'
+            'type'      => 'text',
+            'default'   => 'Copyright All Right Reserved'
         ),
       )
     ) );
@@ -145,31 +147,7 @@ if( class_exists( 'CSF' ) ) {
                 'title'     => 'Features Description',
                 'default'   => 'Praesent posuere fringilla elit, non maximus tellus posuere nec. Nunc eu sapien nec est elementum sodales.',
             ),
-            array(
-                'id'        => 'features_section',
-                'title'     => 'Features Section',
-                'type'      => 'repeater',
-                'fields'    => array(
-                    array(
-                        'id'        => 'features_icon_class',
-                        'title'     => 'Features Icon Class',
-                        'type'      => 'text',
-                        'default'   => 'fa fa-area-chart',
-                    ),
-                    array(
-                        'id'        => 'features_title',
-                        'title'     => 'Features Title',
-                        'type'      => 'text',
-                        'default'   => 'Top Performance',
-                    ),
-                    array(
-                        'id'        => 'features_shortdes',
-                        'title'     => 'Features Short Desciption',
-                        'type'      => 'textarea',
-                        'default'   => 'Donec sit amet tempor quam. Maecenas nec aliquam leo, sed tincidunt urna.',
-                    ),
-                ),
-            ),
+            
         ),
     ) );
     // Gallery Section 

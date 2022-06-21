@@ -107,27 +107,34 @@
           </div>
           <div class="row">
             <?php
-                $features = $options['features_section'];
-                foreach( $features as $feature ):
-            ?>
-                <div class="col-md-6">
-                    <div class="service-item">
-                        <i class="<?php echo $feature['features_icon_class']; ?>"></i>
-                        <h4>
-                            <?php
-                                echo $feature['features_title'];
-                            ?>
-                        </h4>
-                        <p>
-                            <?php
-                                echo $feature['features_shortdes'];
-                            ?>
-                        </p>
+                $features  = new WP_Query( array(
+                    'post_type'     => 'features',
+                    'post_per_page' => 4,
+                    'order'         => 'ASC'
+                ) );
+                while( $features->have_posts() ):
+                    $features->the_post();
+                ?>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <i class="<?php echo get_post_meta( $post->ID, 'icon_class', true ) ?>"></i>
+                            <h4>
+                                <?php
+                                    the_title();
+                                ?>
+                            </h4>
+                            <p>
+                                <?php
+                                    echo wp_trim_words( get_the_content(), 12 )
+                                ?>
+                            </p>
+                            <a href="<?php echo get_permalink(); ?>">See More</a>
+                        </div>
                     </div>
-                </div>
-            <?php
-                endforeach;
+                <?php
+                endwhile;
             ?>
+            
           </div>
         </div>
       </section>

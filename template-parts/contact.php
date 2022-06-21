@@ -20,7 +20,8 @@
         <div class="right-content">
             <div class="container">
             <form id="contact" action="" method="post">
-                <!-- <div class="row">
+                <!-- 
+                <div class="row">
                     <div class="col-md-6">
                         <fieldset>
                             [text* your-name id:name class:form-control placeholder "Your Name"]
@@ -46,7 +47,8 @@
                             <button type="submit" id="form-submit" class="button">Send Message</button>
                         </fieldset>
                     </div>
-                </div> -->
+                </div> 
+            -->
                 <?php
                     echo do_shortcode( '[contact-form-7 id="122" title="bluegoon"]' );
                 ?>

@@ -41,5 +41,8 @@
     }
     add_action( 'wp_enqueue_scripts', 'bluegoon_assets' );
 
-    // Post type file linkup
+    // Gallery Post type file linkup
     require_once get_theme_file_path(). '/inc/post-type/gallery-post-type.php' ;
+
+    // Features Post type file linkup
+    require_once get_theme_file_path(). '/inc/post-type/features-post-type.php' ;
