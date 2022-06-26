@@ -19,8 +19,9 @@
         <div class="row">
         <div class="right-content">
             <div class="container">
-            <form id="contact" action="" method="post">
+            
                 <!-- 
+            <div id="contact">
                 <div class="row">
                     <div class="col-md-6">
                         <fieldset>
@@ -48,11 +49,12 @@
                         </fieldset>
                     </div>
                 </div> 
+            </div>
             -->
                 <?php
                     echo do_shortcode( '[contact-form-7 id="122" title="bluegoon"]' );
                 ?>
-            </form>
+            
             </div>
         </div>
         </div>
