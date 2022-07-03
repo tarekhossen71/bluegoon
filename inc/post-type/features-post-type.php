@@ -51,7 +51,7 @@
             'can_export'            => true,
             'rewrite'               => true,
             'capability_type'       => 'post',
-            'supports'              => array( 'title','editor', 'custom-fields' ),
+            'supports'              => array( 'title','editor', 'thumbnail' ),
         );
         register_post_type( 'features', $args );
     }

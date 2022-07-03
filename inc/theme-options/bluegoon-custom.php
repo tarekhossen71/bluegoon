@@ -30,6 +30,12 @@ if( class_exists( 'CSF' ) ) {
                 'desc'      => 'Get Icon Class From: https://fontawesome.com/',
                 'default'   => 'fa fa-facebook',
             ),
+            array(
+                'id'        => 'social_icon_url',
+                'title'     => 'Icon Url',
+                'type'      => 'text',
+                'default'   => '#',
+            ),
           ),
         ),
         array(
@@ -47,11 +53,21 @@ if( class_exists( 'CSF' ) ) {
       'title'  => 'Header Section',
       'fields' => array(
   
-        // A textarea field
+        // A image field
         array(
           'id'    => 'header_image',
           'type'  => 'media',
           'title' => 'Header Image',
+        ),
+        array(
+          'id'    => 'background_color',
+          'type'  => 'color',
+          'title' => 'Background Color',
+        ),
+        array(
+          'id'    => 'menu_color',
+          'type'  => 'color',
+          'title' => 'Menu Color',
         ),
       )
     ) );

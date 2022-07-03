@@ -117,7 +117,12 @@
                 ?>
                     <div class="col-md-6">
                         <div class="service-item">
-                            <i class="<?php echo get_post_meta( $post->ID, 'icon_class', true ) ?>"></i>
+                            <!-- <i class="<?php echo get_post_meta( $post->ID, 'icon_class', true ) ?>"></i> -->
+                            <div class="features_image">
+                            <?php
+                                the_post_thumbnail( 'large' );
+                            ?>
+                            </div>
                             <h4>
                                 <?php
                                     the_title();
@@ -125,7 +130,7 @@
                             </h4>
                             <p>
                                 <?php
-                                    echo wp_trim_words( get_the_content(), 12 )
+                                    echo wp_trim_words( get_the_content(), 20 )
                                 ?>
                             </p>
                             <a href="<?php echo get_permalink(); ?>">See More</a>
@@ -189,10 +194,9 @@
 
                         $termSlug = '';
                         $termsArray = get_the_terms( $post->ID, 'gellary_taxonomy' );
-                        foreach( $termsArray as $term ):
-                            $termSlug = $term->slug;
-
-                        endforeach;
+                        foreach( $termsArray as $terms ){
+                            $termSlug = $terms->slug;
+                        }
                 ?>
                     <div class="isotope-item" data-type="<?php echo $termSlug; ?>">
                     <figure class="snip1321">

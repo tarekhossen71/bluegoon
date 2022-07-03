@@ -12,7 +12,9 @@
                 <h1 class="close">
                   <a href="<?php echo home_url(); ?>">&times;</a>
                 </h1>
-                <i class="<?php echo get_post_meta( $post->ID, 'icon_class', true ) ?>"></i>
+                <?php
+                    the_post_thumbnail( 'large' );
+                ?>
                 
                 <h4>
                     <?php

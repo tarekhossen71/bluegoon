@@ -8,6 +8,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="Tooplate" />
+    <style>
+      #page-wraper {
+        /* #4AA0DD */
+        background: <?php echo $options['background_color']; ?> no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+    }
+    .menu {
+        left: 8%;
+      -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
+      -webkit-overflow-scrolling: touch;
+      background-color: <?php echo $options['menu_color']; ?>;
+      box-sizing: border-box;
+      height: 100vh;  
+      max-height: 100vh !important;
+      max-width: 80vw !important;
+      min-width: 45px !important;
+      outline: none;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      padding: 0;
+      position: fixed !important;
+      top: calc(0px);  
+      width: 22%;
+      will-change: transform;
+      z-index: 9999 !important;
+    }
+    </style>
    <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
@@ -59,7 +90,7 @@
                     foreach( $socials as $social ):
                 ?>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo $social['social_icon_url']; ?>">
                             <i class="<?php
                             if( isset($social['social_icon']) ){
                                 echo $social['social_icon']; 
@@ -83,7 +114,7 @@
                         }
                     ?>
                 <br>
-              Design: Tarek
+              Design: Almamun
                 </p>
             </div>
           </div>
