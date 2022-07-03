@@ -200,7 +200,7 @@
                 ?>
                     <div class="isotope-item" data-type="<?php echo $termSlug; ?>">
                     <figure class="snip1321">
-                        <img src="<?php the_post_thumbnail_url();?>" alt="woman at the beach" />
+                        <img src="<?php the_post_thumbnail_url();?>" />
                         <figcaption>
                         <a href="<?php the_post_thumbnail_url();?>"
                             data-lightbox="image-1"
